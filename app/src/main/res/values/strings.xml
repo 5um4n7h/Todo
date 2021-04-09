@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TODO</string>
     <string name="textview">TextView</string>
+    <string name="enter_the_todo_title">Enter the Todo Title</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="delete_done">Delete Done</string>
 </resources>

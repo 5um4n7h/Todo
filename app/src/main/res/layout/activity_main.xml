@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="m"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -15,25 +16,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etTodoTitle"
+        style="@android:style/Widget.Material.EditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
+        android:layout_margin="4dp"
+        android:autofillHints="@string/enter_the_todo_title"
+        android:backgroundTint="@color/design_default_color_on_primary"
         android:ems="10"
-        android:hint="Enter the Todo Title"
         android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:shadowColor="#CCCACA"
+        android:singleLine="false"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAddTodo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvTodo" />
+        app:layout_constraintTop_toBottomOf="@+id/rvTodo"
+        tools:ignore="LabelFor"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/btnAddTodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Todo"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:text="@string/add_todo"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDel"
@@ -44,10 +54,13 @@
         android:id="@+id/btnDel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete Done"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:text="@string/delete_done"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnAddTodo"
         app:layout_constraintTop_toBottomOf="@+id/rvTodo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
